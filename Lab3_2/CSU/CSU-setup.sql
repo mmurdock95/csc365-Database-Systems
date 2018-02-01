@@ -1,0 +1,72 @@
+#Michael Murdock
+#rmurdock@calpoly.edu
+#CSC365 EBuckalew
+#Lab 3
+CREATE TABLE Campuses(
+   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+   campus VARCHAR(200) NOT NULL,
+   location VARCHAR(200) NOT NULL,
+   county VARCHAR(200) NOT NULL,
+   year INTEGER NOT NULL
+);
+
+CREATE TABLE fees(
+   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   campus INTEGER NOT NULL, 
+   year INTEGER NOT NULL,
+   campusFee INTEGER NOT NULL,
+   FOREIGN KEY (campus) REFERENCES Campuses(id)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
+CREATE TABLE degrees(
+   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+   year INTEGER NOT NULL, 
+   campus INTEGER NOT NULL,
+   degrees INTEGER,
+   FOREIGN KEY (campus) REFERENCES Campuses(id)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
+CREATE TABLE disciplines(
+   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   name VARCHAR(200)
+);
+
+CREATE TABLE disciplineEnrollments(
+   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+   campus INTEGER NOT NULL,
+   discipline INTEGER NOT NULL, 
+   year INTEGER NOT NULL,
+   undergraduate INTEGER NOT NULL,
+   graduate INTEGER NOT NULL,
+   FOREIGN KEY (campus) REFERENCES Campuses(id)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE,
+   FOREIGN KEY (discipline) REFERENCES disciplines(id)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
+CREATE TABLE enrollments(
+   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   campus INTEGER NOT NULL,
+   year INTEGER NOT NULL,
+   totalEnrollment_ay INTEGER NOT NULL, 
+   fte_ay INTEGER NOT NULL,
+   FOREIGN KEY (campus) REFERENCES Campuses(id)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);
+
+CREATE TABLE faculty(
+   id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+   campus INTEGER NOT NULL,
+   year INTEGER NOT NULL,
+   facutly DECIMAL(5,1),  
+   FOREIGN KEY (campus) REFERENCES Campuses(id)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+);

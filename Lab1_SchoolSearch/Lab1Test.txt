@@ -1,0 +1,88 @@
+//CSC 365 Spring 2017
+//Jonathan Cheruvelil
+//Michael Murdock
+//Lab 1-1 Test Suite
+//Note: each test case below will satisfy R1, R2, R3, and R13 
+
+//TC-1
+//Tests Requirement R4
+//Short form, existing student
+//expected output: EARLY TORY 3 107 FAFARD ROCIO
+
+S: EARLY
+
+//TC-2
+//Tests Requirement R5
+//Short form, existing student
+//expected output: GUM NOAH 54
+
+S: GUM B
+
+//TC-3
+//Tests Requirement R6
+//Short form, existing teacher
+//expected output: DURAND CARLEE
+
+T: COOL
+
+//TC-4
+//Test Requirement R7
+//Long form, existing grade
+//expected output: SAELEE DANILO
+//                 GARTH JOHN
+
+Grade: 1
+
+//TC-5
+//Test Requirement R8
+//Short form, existing bus
+//expected output: 	RACANELLO NOEL 6 102
+//			VILARDO EMMANUEL 2 104
+//			KRAKE VALENTIN 6 109
+//			BEAN INGER 6 111
+//			BUSSMANN BILLY 2 108
+//			FEYEREISEN WILFREDO 6 111
+
+B: 56
+
+//TC-6
+//Test Requirement R9
+//Short form, existing grade, High
+//expected output: GARTH JOHN 3.14 FALKER ADOLPH 0
+
+G: 1 H
+
+//TC-7
+//Test Requirement R10
+//Short form, existing grade
+//expected output: 1 2.995
+
+A: 1
+
+//TC-8
+//Test Requirement R11
+//Long form
+//expected output: 	0: 0
+//			1: 2
+//			2: 13
+//			3: 9
+//			4: 15
+//			5: 0
+//			6: 21
+
+I
+
+
+//TC-9
+//Test Requirement R4
+//Incorrect name
+//expected output: blank
+
+sdf
+
+//TC-10
+//Test Requirement R12
+//Short form
+//expected output: program termination
+
+Q

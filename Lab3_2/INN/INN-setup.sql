@@ -1,0 +1,29 @@
+#Michael Murdock
+#rmurdock@calpoly.edu
+#CSC365 EBuckalew
+#Lab 3
+CREATE TABLE Rooms(
+  id VARCHAR(3) PRIMARY KEY NOT NULL,
+  roomName VARCHAR(150) NOT NULL,
+  beds INTEGER NOT NULL,
+  bedType VARCHAR(50) NOT NULL,
+  maxOccupancy INTEGER NOT NULL,
+  basePrice INTEGER NOT NULL,
+  decor VARCHAR(150)
+);
+
+CREATE TABLE Reservations(
+  id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  code INTEGER NOT NULL,
+  room VARCHAR(3) NOT NULL,
+  checkIn DATE NOT NULL,
+  checkOut DATE,
+  rate DECIMAL(7,2) NOT NULL,
+  lastName VARCHAR(150) NOT NULL,
+  firstName VARCHAR(150) NOT NULL,
+  adults INTEGER NOT NULL,
+  kids INTEGER NOT NULL,
+  FOREIGN KEY (room) REFERENCES Rooms(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);

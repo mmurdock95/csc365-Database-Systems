@@ -1,0 +1,12 @@
+INSERT INTO airlines(name,abbreviation,country) VALUES ('United Airlines','UAL','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('US Airways','USAir','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('Delta Airlines','Delta','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('Southwest Airlines','Southwest','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('American Airlines','American','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('Northwest Airlines','Northwest','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('Continental Airlines','Continental','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('JetBlue Airways','JetBlue','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('Frontier Airlines','Frontier','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('AirTran Airways','AirTran','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('Allegiant Air','Allegiant','USA');
+INSERT INTO airlines(name,abbreviation,country) VALUES ('Virgin America','Virgin','USA');
