@@ -1,0 +1,112 @@
+
+			Final Exam (both sections):
+			Tue, Dec 05 2017
+			7:10 P.M. - 10:00 P.M.
+			Graphic Arts 026 -0106
+
+All material is subject to conceptual questions and to application questions.
+Some topics are marked "Conceptual Only" and are therefore not subject to
+application questions.
+
+-----------------------------------------------------------------------------
+
+
+We have discussed the following material in your textbook:
+
+   Overview of DBMS/databases --Chapter 1, up to and including 1.2
+      know the components and their purpose
+
+   Basics of the Relational Model -- Chapter 2, up to and including 2.3
+      (but skipping 2.1.4, 2.1.5, & 2.1.6)
+
+   The Relational Algebra: section 2.4
+      know all of the operators and how to use them
+      write a relational algebra expression for problem
+      give the operator tree for your expression
+      what will your expression produce
+      given an expression and a database, what is produced?
+
+   SQL DML: 6.0-6.2.5; 6.4-6.4.1; 6.4.3-6.4.7; 6.5
+      SELECT-FROM-WHERE-GROUP BY-HAVING-ORDER BY <for absolute sure>
+      (up to and including aggregation)
+
+      INSERT INTO 
+      DELETE FROM 
+      UPDATE
+
+      NULL values in the WHERE clause
+
+      -> I WILL NOT expect you to know arcane DATE/TIME functions.
+
+   Entity Relationship: 4.1; 4.3.1-4.3.3; 4.4 (but notation varies a bit)
+      know the notation used in class: given a diagram, answer questions as
+         point out an identifying relationship;
+         point out a weak entity type;
+         which entity set of this relationship may be related to more than 
+            one entity;
+
+      conceptual questions may be asked e.g.,
+       - What does total participation in a relationship mean?
+       - Why can't we have a multi-valued attribute in a table with its entity?
+       - Given an English description and a partial diagram, should certain
+	 information be an attribute or another entity?
+
+      -> I WILL NOT give you an English description of data and ask you
+         to come up with a diagram.
+      -> I MAY give you a diagram and ask you to come up with a set
+         of relations.
+      -> I MAY give you a diagram and ask you questions about it
+
+   Nested Queries (Subqueries) section 6.3
+	 You will MOST CERTAINLY need to write subqueries (unless you can
+	 find a way around it).
+
+   Alternative Join Syntax section 6.3.6
+      -> You may use any JOIN syntax you wish to use.
+      -> I may ask conceptual questions, so don't feel that you can just
+	 skip this.
+
+   Outer Joins -- section 5.2.7; 6.3.8
+	 You might need to write a relational algebra query with outer join
+	 You might need to write a SQL query with outer join
+
+   JDBC -- section 9.6 conceptual questions
+	 I could perhaps ask you to prepare a query for execution.
+	 But I don't see asking you to write Java code on the exam.
+	 
+
+   Database Views -- section 8.1 conceptual only
+
+   SQL Injection -- not in your text; conceptual/short answer only
+      Given a snippet of application code,
+      -> be able to tell me what a SQL query would look like for different
+	 inputs from a user with nefarious intent
+      -> be able to decide if a string input would be effective for
+	 nefarious purposes
+      -> be able to explain the purpose served by different parts of an input
+	 string
+      -> be able to tell me what would happen if the SQL login statement
+	 were different from what was given in class
+      -> know strategies to prevent SQL Injection
+
+   Transactions -- section 6.6 (except 6.6.7)
+
+      I remind you that the 'I' in the ACID properties of transactions is
+      ISOLATION, and that it means that a transaction is executed apparently
+      as though it is running in the database in isolation, that is, as
+      though it is the only transaction running. Thus, no transaction should
+      ever be able to read intermediate results from another transaction.
+
+      See the box on page 305 for a brief discussion of transactions running
+      at different Isolaton levels.
+
+   Remember the principle of Orthogonality -- if an object of type X can
+   be used somewhere, ANY object of type X 
+
+   We will use heroDogs again, but I will modify the data so it's more
+   interesting. (For example, the Labrador Retriever has been the #1 dog
+   breed for 26 years. So questions such as "List the breeds that have
+   been #1 and how many times they have been #1 in the past 26 years and
+   order them by the number of times they have been #1" and have the data
+   make it interesting. Yeah, the schema is really all you need, but I
+   want to have interesting data too.
